@@ -1,0 +1,5 @@
+ECAPv5, little-endian
+header: magic[8], channels:u16, samples_per_segment:u16, segment_count:u32, sample_rate_hz:u32
+segment: trigger_timestamp:u64, channel0_agc_q12:u16, channel1_agc_q12:u16, then channel-major signed i16 samples
+AGC fields use unsigned Q12.
+channel 0: OW_DATA voltage; channel 1: reflected-current pickup

@@ -1,0 +1,87 @@
+{
+  "capture": "session.ecap",
+  "filter_lags": 5,
+  "format": "echoes-transaction-v5",
+  "intervals": [
+    {
+      "generators": {
+        "stream_a": {
+          "seed": 1
+        },
+        "stream_b": {
+          "seed": 10
+        }
+      },
+      "kind": "prbs7",
+      "name": "reference_0",
+      "segment_count": 127,
+      "start_segment": 0
+    },
+    {
+      "kind": "unknown_pair",
+      "logical_bit_start": 0,
+      "name": "response_0",
+      "segment_count": 56,
+      "start_segment": 127
+    },
+    {
+      "generators": {
+        "stream_a": {
+          "seed": 5
+        },
+        "stream_b": {
+          "seed": 9
+        }
+      },
+      "kind": "prbs7",
+      "name": "reference_1",
+      "segment_count": 127,
+      "start_segment": 183
+    },
+    {
+      "kind": "unknown_pair",
+      "logical_bit_start": 56,
+      "name": "response_1",
+      "segment_count": 56,
+      "start_segment": 310
+    },
+    {
+      "generators": {
+        "stream_a": {
+          "seed": 8
+        },
+        "stream_b": {
+          "seed": 118
+        }
+      },
+      "kind": "prbs7",
+      "name": "reference_2",
+      "segment_count": 127,
+      "start_segment": 366
+    }
+  ],
+  "prbs7": {
+    "output": "msb",
+    "polynomial": "x^7+x^6+1",
+    "shift": "left",
+    "width": 7
+  },
+  "public_nonce_hex": "acc88499ed88ee04",
+  "streams": {
+    "bit_order": "lsb-first",
+    "stream_a": {
+      "checksum": "Dallas CRC-8/0x8c",
+      "data_bytes": 7,
+      "family_byte": "01",
+      "idle_bit_after_wire": 1,
+      "wire_bytes": 8
+    },
+    "stream_b": {
+      "checksum": "CRC-16/MAXIM-DOW",
+      "crc_byte_order": "little-endian",
+      "data_bytes": 12,
+      "family_byte": "3a",
+      "wire_bytes": 14
+    }
+  }
+}
