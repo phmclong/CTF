@@ -46,6 +46,7 @@ Chỉ **loopback** mới được (`10.0.0.1`, `192.168.1.1`, `172.17.0.1` vẫn
 ```
 
 Ba giá trị quyết định bước tiếp theo:
+
 1. `commons-collections-3.2.1.jar` — đúng version có InvokerTransformer chưa bị patch (guard chỉ thêm ở 3.2.2+)
 2. `tribes receiver tcp *:4000` — gateway **không phải** custom socket mà là Tomcat Tribes → phải frame theo chuẩn Tribes, không phải java serialization trần
 3. AES/CBC/PKCS5 — nhưng Entry 003 cho biết seal fail vẫn ship
