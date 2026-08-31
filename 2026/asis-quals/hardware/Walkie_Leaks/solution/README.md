@@ -135,6 +135,8 @@ Loại padding `FF` và ghép các fragment:
 ASIS{u5b_p4ck3t5_n3v3r_l1e}
 ```
 
+![alt text](solved.png)
+
 ## Tham khảo
 
 - [CHIRP driver cho Radtel RT-752/GT-10](https://github.com/EA5JQP/Chirp-Driver-Radtel-RT752/blob/main/rt752.py)
